@@ -1,0 +1,64 @@
+/* You can add global styles to this file, and also import other style files */
+
+* { 
+  margin:0;
+  padding:0;
+}
+a:link, a:visited, a:hover, a:active {
+  color:#0f0;
+  font-size:16px;
+}
+body {
+  background:#eee;
+  font-family:verdana;
+}
+h1 {
+  color: white;
+  font-size:30px;
+}
+p {
+  font-size:16px;
+}
+ul {
+  list-style-type:none;
+}
+#cabecera {
+  color:white;
+  background-color:#0DA3F6;
+  padding:10px;
+}
+#contenedor {
+  margin:0 auto;
+  width:1300px;
+}
+#contenido1 {
+  background-color:white;
+  text-align: center;
+  float:left;
+  height:590px;
+  padding:15px;
+  width:400px;
+}
+#contenido2 {
+  background-color:#ECECEC;
+  text-align: center;
+  float:left;
+  height:590px;
+  padding:15px;
+  width:400px;
+}
+#contenido3 {
+  background-color:#CACACA;
+  text-align: center;
+  float:left;
+  height:590px;
+  padding:15px;
+  width:410px;
+}
+#pie { 
+  background-color:#0DA3F6;
+  clear:both;
+  color:white;
+  padding:10px;
+  text-align:center;
+}

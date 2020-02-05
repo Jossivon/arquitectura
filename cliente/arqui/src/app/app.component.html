@@ -1,0 +1,75 @@
+<div id="contenedor">
+  <div id="cabecera">
+    <h1 align="center" style="color:white">CLIENTE REST</h1>
+  </div>
+
+  <div id="contenido1">
+    <p align="center"><b>Servicio Local</b></p>
+    <br />
+    <img
+      src="https://www.comunidadbaratz.com/wp-content/uploads/En-el-mundo-existen-150.000.000-de-libros%E2%80%A6-y-estos-son-los-100-mejores.jpg"
+      style="max-width:100%;width:60%;"
+      border="1"
+    /><br /><br />
+    <input
+      type="text"
+      #nickname="ngModel"
+      [(ngModel)]="id"
+      class="form-control"
+      placeholder="Name"
+      required="required"
+      autofocus="autofocus"
+    />
+    <button (click)="peticion()">Mostar Informacion</button>
+
+    <div *ngFor="let item of respuestaPHP.datosPHP">
+      <br>
+      <br>
+      <p>Codigo del libro {{item.id}}</p> 
+      <p>Nombre del libro {{item.nombre}}</p> 
+      <p>Descripcion del libro {{item.descripcion}}</p> 
+      <br>
+    </div>
+
+  </div>
+
+  <div id="contenido2">
+    <p align="center"><b>Servicio Api EstudioGhlib</b></p>
+    <br />
+    <img
+      src="https://vignette.wikia.nocookie.net/samina-uchiha-julieta/images/d/d7/Mi-vecino-totoro-cartel.jpg/revision/latest/scale-to-width-down/340?cb=20130201120007&path-prefix=es"
+      style="max-width:100%;width:55%;"
+      border="1"
+    /><br /><br />
+    <h4>TITULO: {{ this.respuestaPy.datos["title"] }}</h4>
+    <br>
+    <h4>DESCRIPCION: {{ this.respuestaPy.datos["description"] }}</h4>
+    <br>
+    <h4>DIRECTOR: {{ this.respuestaPy.datos["director"] }}</h4>
+    
+  </div>
+
+  <div id="contenido3">
+    <p align="center"><b>Servicio Api Directo</b></p>
+    <br />
+    <img
+      src="https://upload.wikimedia.org/wikipedia/commons/6/6c/Star_Wars_Logo.svg"
+      style="max-width:100%;width:65%;"
+      border="1"
+    /><br /><br />
+    <h3>NOMBRE DEL PERSONAJE: {{ this.respuestaPy.datos2["name"] }}</h3>
+    <br>
+    <h3>ALTURA: {{ this.respuestaPy.datos2["height"] }}</h3>
+    <br>
+    <h3>MASA: {{ this.respuestaPy.datos2["mass"] }}</h3>
+    <br>
+    <h3>COLOR DE CABELLO: {{ this.respuestaPy.datos2["hair_color"] }}</h3>
+    <br>
+    <h3>COLOR DE PIEL: {{ this.respuestaPy.datos2["skin_color"] }}</h3>
+    
+  </div>
+
+  <div id="pie">
+    <p>Creado Por: Cristopher Garcia - Ivonne Barahona - David Parra</p>
+  </div>
+</div>
